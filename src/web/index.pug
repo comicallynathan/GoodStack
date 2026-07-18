@@ -1,0 +1,8 @@
+include components/essentials
+
+mixin Message( content )
+    h1 #{ content }
+
++prerequisites 
+body 
+    +Message( "Hello World!" )

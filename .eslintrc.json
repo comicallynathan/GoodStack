@@ -1,0 +1,68 @@
+{
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"jsx": true,
+		"useJSXTextNode": true,
+		"ecmaVersion": 2018,
+		"sourceType": "module",
+		"project": [
+			"./tsconfig.json",
+			"./src/tsconfig.json"
+		]
+	},
+	"ignorePatterns": [
+		"/out",
+		"/src/web/static"
+	],
+	"plugins": [
+		"@typescript-eslint"
+	],
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended"
+	],
+	"rules": {
+		"array-bracket-spacing": [
+			"warn",
+			"always"
+		],
+		"array-bracket-newline": [
+			"warn",
+			"consistent"
+		],
+		"block-spacing": "warn",
+		"brace-style": [
+			"error",
+			"allman",
+			{
+				"allowSingleLine": true
+			}
+		],
+		"comma-dangle": "error",
+		"comma-style": [
+			"warn",
+			"last"
+		],
+		"indent": "warn",
+		"no-inner-declarations": "off",
+		"semi": "error",
+		"object-curly-spacing": [
+			"warn",
+			"always"
+		],
+		"object-curly-newline": [
+			"warn",
+			{
+				"consistent": true
+			}
+		],
+		"quotes": [
+			"warn",
+			"double"
+		],
+		"space-in-parens": [
+			"warn",
+			"always"
+		]
+	}
+}

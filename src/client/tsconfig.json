@@ -1,0 +1,18 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "noEmit": false,
+        "outDir": "../../dist/client",
+        "emitDeclarationOnly": false,
+        "rewriteRelativeImportExtensions": true,
+        "lib": ["DOM", "ESNext"],
+        "paths": {
+            "@components/*": [
+                "../web/components/client/*"
+            ],
+            "@styles/*": [
+                "../web/styles/*"
+            ]
+        }
+    }
+}

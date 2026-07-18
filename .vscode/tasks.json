@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Watch All",
+            "dependsOn": [
+                "Watch",
+                "Watch SCSS",
+                "Watch Webpack"
+            ],
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
+        },
+        {
+            "label": "Generate Database",
+            "type": "shell",
+            "command": "bun generate::database"
+        },
+        {
+            "label": "Port",
+            "type": "shell",
+            "command": "source .env && ngrok http 3000"
+        },
+        {
+            "label": "Watch",
+            "type": "shell",
+            "command": "bun run watch"
+        },
+        {
+            "label": "Watch SCSS",
+            "type": "shell",
+            "command": "bun run watch::sass"
+        },
+        {
+            "label": "Watch Webpack",
+            "type": "shell",
+            "command": "bun run watch::webpack"
+        }
+    ]
+}
