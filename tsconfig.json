@@ -28,7 +28,15 @@
 
     // Paths
     "paths": {
-      "@core/*": ["./src/engine/core/*"]
+      "@core/*": [
+        "./src/engine/core/*"
+      ],
+      "@mods/*": [
+        "./src/engine/modules/*"
+      ],
+      "@mods/safe-path": [
+        "./node_modules/@buckoroo/safe-path"
+      ],
     }
   }
 }

@@ -42,16 +42,20 @@ import( "@core/webpack" );
 
 const app = express();
 
+// import( "@mods/database" );
+( await import( "@mods/rate-limit" ) ).Start( app );
+
+
 app.set( "views", "src/web" );
 app.set( "view engine", "pug" );
 
 app.use( express.static( "src/web/static" ) );
 
-const Safe = ( await import( "@buckoroo/safe-path" ) ).Intialize( app );
+const Safe = ( await import( "@mods/safe-path" ) ).Intialize( app );
 
 app.get(
     "",
-    ( request, response ) => response.render( "index.pug" )
+    ( _, response ) => response.render( "index.pug" )
 );
 
 app.get(
@@ -74,7 +78,7 @@ app.get(
 );
 
 app.use(
-    ( request, response ) => response.status( 404 ).render( "404" )
+    ( _, response ) => response.status( 404 ).render( "404" )
 );
 
 app.listen(
