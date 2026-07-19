@@ -4,7 +4,13 @@
   "type": "module",
   "private": true,
   "devDependencies": {
-    "@types/bun": "latest"
+    "@tailwindcss/postcss": "^4.3.3",
+    "@tailwindcss/webpack": "^4.3.3",
+    "@types/bun": "latest",
+    "autoprefixer": "^10.5.4",
+    "postcss": "^8.5.19",
+    "postcss-loader": "^8.2.1",
+    "tailwindcss": "^4.3.3"
   },
   "peerDependencies": {
     "typescript": "^5",

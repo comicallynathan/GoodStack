@@ -4,9 +4,7 @@
         {
             "label": "Watch All",
             "dependsOn": [
-                "Watch",
-                "Watch SCSS",
-                "Watch Webpack"
+                "Watch"
             ],
             "runOptions": {
                 "runOn": "folderOpen"
@@ -26,16 +24,6 @@
             "label": "Watch",
             "type": "shell",
             "command": "bun run watch"
-        },
-        {
-            "label": "Watch SCSS",
-            "type": "shell",
-            "command": "bun run watch::sass"
-        },
-        {
-            "label": "Watch Webpack",
-            "type": "shell",
-            "command": "bun run watch::webpack"
         }
     ]
 }

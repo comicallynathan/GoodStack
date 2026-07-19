@@ -12,7 +12,11 @@ export default {
                 test: /\.scss$/i, // Match .scss files
                 use: [
                     "style-loader", // Injects styles into DOM
-                    "css-loader",   // Turns CSS into JS modules
+                    {
+                        loader: "css-loader",
+                        options: { importLoaders: 2 }
+                    },   // Turns CSS into JS modules
+                    "postcss-loader", // Allows Tailwind
                     "sass-loader"   // Compiles SCSS to CSS
                 ]
             },
