@@ -32,3 +32,6 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 
 # Finder (MacOS) folder config
 .DS_Store
+
+# TS => JS Build files
+src/web/static/scripts/*.js

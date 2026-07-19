@@ -5,10 +5,17 @@
         "outDir": "../../dist/client",
         "emitDeclarationOnly": false,
         "rewriteRelativeImportExtensions": true,
-        "lib": ["DOM", "ESNext"],
+        "lib": [
+            "DOM",
+            "DOM.Iterable",
+            "ESNext"
+        ],
         "paths": {
             "@components/*": [
                 "../web/components/client/*"
+            ],
+            "@mods/*": [
+                "./modules/*"
             ],
             "@styles/*": [
                 "../web/styles/*"

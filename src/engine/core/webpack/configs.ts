@@ -35,6 +35,7 @@ export default {
     resolve: {
         alias: {
             "@components": path.resolve( "src/web/components/client" ),
+            "@mods": path.resolve( "src/client/modules" ),
             "@styles": path.resolve( "src/web/styles" )
         },
         extensions: [ ".tsx", ".ts", ".js" ]
