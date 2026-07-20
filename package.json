@@ -21,7 +21,6 @@
   },
   "dependencies": {
     "@buckoroo/safe-path": "^1.0.0",
-    "@react-pug/babel-plugin-react-pug": "^0.1.18",
     "@types/alpinejs": "^3.13.11",
     "@types/dotenv": "^8.2.3",
     "@types/express": "^5.0.6",
