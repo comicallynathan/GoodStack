@@ -1,5 +1,5 @@
 {
-  "name": "cabin",
+  "name": "GoodStack",
   "module": "src/app.ts",
   "type": "module",
   "private": true,
