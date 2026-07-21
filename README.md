@@ -59,7 +59,7 @@ src
 | --- web // This is often "shared" between the server and the client. This directory also contains .pug files as pages. They're automatically registered.
 | --- | --- components // This is where you would keep your reusable rPug components. E.g., an essential header.
 |     | --- static // This is where you will source your materials to the public.
-      | --- styles // This is where you can add styles to your website.
+|     | --- styles // This is where you can add styles to your website.
 
 ```
 
