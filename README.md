@@ -42,10 +42,11 @@ A good webstack that focuses on modern tooling, type-safety, and shortcuts. Miss
 ## 🏗️ Building
 
 ```
-bun build src/engine/app.ts --outdir build/dist --target RUNTIME
+bun run build --target RUNTIME
 ```
 
 Replace `RUNTIME` with your preferred runtime.
+> You cannot omit the `run` between `bun` and `build` unless you are a wicked genius. Good luck.
 
 ## 📂 References
 
@@ -57,7 +58,7 @@ src
 |     | --- core // This is where items will be processed for production. Do not change unless you know what you are doing.
 |
 | --- web // This is often "shared" between the server and the client. This directory also contains .pug files as pages. They're automatically registered.
-| --- | --- components // This is where you would keep your reusable rPug components. E.g., an essential header.
+| --- | --- components // This is where you would keep your reusable Pug components. E.g., an essential header.
 |     | --- static // This is where you will source your materials to the public.
 |     | --- styles // This is where you can add styles to your website.
 
