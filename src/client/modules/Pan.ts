@@ -5,10 +5,13 @@ const parser = new DOMParser();
  * @param root 
  * @param elements 
  */
-export function Add( root: HTMLElement, elements: string )
+export function Add( root: HTMLElement, elements: string ): HTMLCollection
 {
     const container = parser.parseFromString( elements, "text/html" );
-    for ( const v of container.children ) document.body.appendChild( v );
+    const nodes = container.children;
+    for ( const v of nodes ) document.body.appendChild( v );
+    return nodes;
+            
 }
 
 export const Pan = {
