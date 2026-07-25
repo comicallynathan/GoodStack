@@ -7,7 +7,7 @@ const env = process.env;
 export default defineConfig(
     {
         out: "./src/engine/modules/database/_data",
-        schema: "./src/engine/modules/database/schema.ts/_data",
+        schema: "./src/engine/modules/database/_data",
         dialect: "mysql",
         dbCredentials: {
             database: env.DB_DATABASE!,
