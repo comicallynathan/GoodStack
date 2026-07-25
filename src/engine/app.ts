@@ -54,17 +54,12 @@ app.use( express.static( "src/web/static" ) );
 const Safe = ( await import( "@mods/safe-path" ) ).Intialize( app );
 
 app.get(
-    "",
-    ( _, response ) => response.render( "index.pug" )
-);
-
-app.get(
     "{/*path}",
     ( request, response ) => 
     {
         const userpath = request.path.slice( 1 );
         
-        Safe( userpath )
+        Safe( userpath ? userpath : "index" )
             .then(
                 () =>
                 {
