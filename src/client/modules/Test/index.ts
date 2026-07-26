@@ -1,0 +1,16 @@
+import Pan from "@mods/Pan";
+
+import( "@components/test.pug" )
+    .then(
+        ( element ) => Pan.Add(
+            document.body,
+            element.default(
+                {
+                    methodology: "Pug + Typescript"
+                }
+            )
+        )
+    );
+
+/* BEFORE USING LUA, TURN ON `lua` IN `goodstack.config.ts` */
+// import( "./test.lua" );

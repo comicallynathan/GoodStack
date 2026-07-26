@@ -61,7 +61,7 @@ app.get(
         
         Safe( userpath ? userpath : "index" )
             .then(
-                () => response.render( userpath );
+                () => response.render( userpath )
             )
             .catch(
                 () => response.status( 403 ).redirect( "/" )

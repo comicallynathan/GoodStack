@@ -1,41 +1,69 @@
 import { configDotenv } from "dotenv";
-import { drizzle } from "drizzle-orm/mysql2";
-import sql from "mysql2";
-import { Logger } from "@core/logger";
-/* 
-    import * as Relations from "./_data/relations";
-    import * as Schema from "./_data/schema";
-*/
+import * as SQL from "mysql2";
+import pino from "pino";
+import { Kysely, MysqlDialect, sql } from "kysely";
+// import type { DB } from "../types/Database";
 
-const logger = ( new Logger( "Database", "database" ) ).Instance;
+const transport = pino.transport(
+    {
+        targets: [
+            {
+                target: "pino-pretty",
+                options: { destination: 1 }
+            },
+            {
+                target: "pino/file",
+                options: { destination: "./logs/database" }
+            }
+        ]
+    }
+);
+
+const logger = pino.pino(
+    { name: "Database" },
+    transport
+);
 
 configDotenv();
 const env = process.env;
 
-const pool = sql.createPool(
+const dialect = new MysqlDialect(
     {
-        database: env.DB_DATABASE,
-        host: env.DB_HOST,
-        user: env.DB_USER,
-        password: env.DB_PASSWORD
+        pool: SQL.createPool(
+            {
+                database: env.DB_DATABASE,
+                host: env.DB_HOST,
+                user: env.DB_USER,
+                password: env.DB_PASSWORD,
+                charset: "utf8mb4_0900_ai_ci"
+            }
+        )
     }
 );
 
-const Database = drizzle(
+const Database = new Kysely/*<DB>*/(
     {
-        client: pool
+        dialect,
+        log( event ): void
+        {
+            if ( event.level === "error" ) logger.error( event.error );
+            else
+            if ( event.level === "query" ) logger.info( event.query );
+        }
     }
 );
 
 logger.info( `Connected to MySQL Database: ${env.DB_USER}@${env.DB_HOST}` );
 
+(
+    sql
+    `
+    SET NAMES "utf8mb4" COLLATE "utf8mb4_0900_ai_ci";
+    SET character_set_client = utf8mb4;
+    SET character_set_connection = utf8mb4;
+    SET character_set_results = utf8mb4;
+    SET collation_connection = utf8mb4_0900_ai_ci;
+    `
+);
+
 export default Database;
-
-export {
-    Database
-
-    /*
-        Relations,
-        Schema
-    */
-};

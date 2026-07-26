@@ -17,6 +17,9 @@
             "@mods/*": [
                 "./modules/*"
             ],
+            "@static/*": [
+                "../web/static/*"
+            ],
             "@styles/*": [
                 "../web/styles/*"
             ]

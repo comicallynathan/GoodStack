@@ -11,12 +11,14 @@ A good webstack that focuses on modern tooling, type-safety, and shortcuts. Miss
 | Scripting | Typescript      |
 | Data      | Drizzle         |
 | State     | AlpineJS        |
+| Embedding | Lua             |
 
 ## Optional Features
 
 - Database client (MySQL)
 - Rate limiting
 - No-BS mounting rendered Pug elements into roots
+- Interoperable Lua embedding / exclusivity via Fengari
 
 ## Why this?
 
@@ -50,7 +52,7 @@ Replace `RUNTIME` with your preferred runtime.
 
 ## 📂 References
 
-```json
+```
 src
 | --- client // This is where you hold the Typescript files which will automatically be compiled and ready for the client to use. `index.ts` is the main character.
 |

@@ -45,6 +45,7 @@
 		],
 		"indent": "warn",
 		"no-inner-declarations": "off",
+		"no-unexpected-multiline": "off",
 		"semi": "error",
 		"object-curly-spacing": [
 			"warn",

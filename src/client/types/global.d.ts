@@ -8,6 +8,8 @@ declare namespace Pug {
     export default template;
 }
 
+declare module "*.lua" {}
+
 declare module "*.pug" {
     export default Pug.default;
 }
