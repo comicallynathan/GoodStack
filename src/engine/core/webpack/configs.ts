@@ -74,7 +74,8 @@ export default {
             "@components": path.resolve( "src/web/components/client" ),
             "@mods": path.resolve( "src/client/modules" ),
             "@static": path.resolve( "src/web/static" ),
-            "@styles": path.resolve( "src/web/styles" )
+            "@styles": path.resolve( "src/web/styles" ),
+            "@t": path.resolve( "src/client/types" )
         },
         extensions: [ ".tsx", ".ts", ".js" ]
     },

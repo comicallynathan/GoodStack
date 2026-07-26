@@ -2,7 +2,7 @@ import { configDotenv } from "dotenv";
 import * as SQL from "mysql2";
 import pino from "pino";
 import { Kysely, MysqlDialect, sql } from "kysely";
-// import type { DB } from "../types/Database";
+// import type { DB } from "@t/Database";
 
 const transport = pino.transport(
     {

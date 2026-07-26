@@ -43,6 +43,9 @@
       "@mods/safe-path": [
         "./node_modules/@buckoroo/safe-path"
       ],
+      "@t/*": [
+        "./src/engine/types/*"
+      ]
     }
   }
 }
