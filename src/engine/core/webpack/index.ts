@@ -1,8 +1,9 @@
 import webpack from "webpack";
 import configs from "./configs";
 import { Logger } from "../logger";
+import type Webpack from "webpack";
 
-const compiler = webpack( configs );
+const compiler = webpack( configs as Webpack.Configuration );
 
 const logger = ( new Logger( "Webpack", "webpack" ) ).Instance;
 

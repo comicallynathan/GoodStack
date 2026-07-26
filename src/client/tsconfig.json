@@ -2,6 +2,7 @@
     "extends": "../../tsconfig.json",
     "compilerOptions": {
         "noEmit": false,
+        "rootDir": "..",
         "outDir": "../../dist/client",
         "emitDeclarationOnly": false,
         "rewriteRelativeImportExtensions": true,
@@ -16,6 +17,9 @@
             ],
             "@mods/*": [
                 "./modules/*"
+            ],
+            "@remotes/*": [
+                "../web/remotes/*"
             ],
             "@static/*": [
                 "../web/static/*"

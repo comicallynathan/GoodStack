@@ -11,6 +11,10 @@ import( "@components/test.pug" )
             )
         )
     );
+    
+import( "@mods/Network" );
+import { Message } from "@remotes/forms.telefunc";
+Message( "Hello from client!" );
 
 /* BEFORE USING LUA, TURN ON `lua` IN `goodstack.config.ts` */
 // import( "./test.lua" );

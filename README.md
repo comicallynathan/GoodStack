@@ -1,17 +1,18 @@
 # GoodStack
 
-A good webstack that focuses on modern tooling, type-safety, and shortcuts. Mission statement: developer experience, rapid prototyping, and deployment. This is an alternative approach to SPA and general web development with a different tech that asks for elegance and maintainability. 👍🏼
+A good batteries-included webstack that focuses on modern tooling, type-safety, and shortcuts. Mission statement: developer experience, rapid prototyping, and deployment. This is an alternative approach to SPA and general web development with a different tech that asks for elegance and maintainability. 👍🏼
 
 ## Stack
 
-| Asset     | Tool            |
-| ---       | ---             |
-| Document  | Pug             |
-| Styles    | SCSS + Tailwind |
-| Scripting | Typescript      |
-| Data      | Drizzle         |
-| State     | AlpineJS        |
-| Embedding | Lua             |
+| Asset          | Tool            |
+| ---            | ---             |
+| Document       | Pug             |
+| Styles         | SCSS + Tailwind |
+| Scripting      | Typescript      |
+| Data           | Drizzle         |
+| State          | AlpineJS        |
+| Embedding      | Lua             |
+| Communications | Telefunc        |
 
 ## Optional Features
 

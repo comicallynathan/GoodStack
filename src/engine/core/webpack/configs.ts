@@ -23,6 +23,10 @@ const loaders = {
             "sass-loader"                       // Compiles SCSS to CSS
         ]
     },
+    "telefunc": {
+        test: /[/\\]web[/\\]remotes[/\\].*\.telefunc\./,
+        use: "telefunc/webpack/loader"
+    },
     "ts": {
         test: /\.tsx?$/,
         use: {
@@ -41,6 +45,7 @@ const plugins = {};
 
 export default {
     entry: Configs.Client.Loaders.ts || !Configs.Client.Loaders.lua ? "./src/client/index.ts" : "./src/client/index.lua",
+    name: "client",
     module: {
         rules: (
             () =>
@@ -73,6 +78,7 @@ export default {
         alias: {
             "@components": path.resolve( "src/web/components/client" ),
             "@mods": path.resolve( "src/client/modules" ),
+            "@remotes": path.resolve( "src/web/remotes" ),
             "@static": path.resolve( "src/web/static" ),
             "@styles": path.resolve( "src/web/styles" ),
             "@t": path.resolve( "src/client/types" )

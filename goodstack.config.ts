@@ -7,6 +7,8 @@ export default {
             pug: true,
             /* Enables importing SCSS */
             scss: true,
+            /* Enables Telefunc for "remote-like" access */
+            telefunc: true,
             /* Enables Typescript */
             ts: true
         },
