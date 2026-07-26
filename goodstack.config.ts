@@ -1,8 +1,11 @@
 export default {
     Client: {
+        Attributes: {
+            PostCSS: false
+        },
         Loaders: {
             /* Enables Lua for browsers in document && scripting*/
-            lua: false,
+            lua: true,
             /* Enables Pug for components */
             pug: true,
             /* Enables importing SCSS */

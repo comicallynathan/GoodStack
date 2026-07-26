@@ -12,15 +12,15 @@ const loaders = {
         use: [ "pug-loader" ]
     },
     "scss": {
-        test: /\.scss$/i,                       // Match .scss files
+        test: /\.scss$/i,                                                     // Match .scss files
         use: [
-            "style-loader",                     // Injects styles into DOM
+            "style-loader",                                                   // Injects styles into DOM
             {
                 loader: "css-loader",
                 options: { importLoaders: 2 }
-            },                                  // Turns CSS into JS modules
-            "postcss-loader",                   // Allows Tailwind
-            "sass-loader"                       // Compiles SCSS to CSS
+            },                                                                // Turns CSS into JS modules
+            Configs.Client.Attributes.PostCSS ? "postcss-loader" : undefined, // Allows Tailwind
+            "sass-loader"                                                     // Compiles SCSS to CSS
         ]
     },
     "telefunc": {
@@ -33,8 +33,9 @@ const loaders = {
             loader: "esbuild-loader",
             options: {
                 loader: "tsx",
-                "target": "ESNext",
-                tsconfig: path.resolve( "src/client/tsconfig.json" )
+                target: "ESNext",
+                tsconfig: path.resolve( "src/client/tsconfig.json" ),
+                minify: process.env.NODE_ENV === "production"
             }
         },
         exclude: /node_modules/

@@ -7,3 +7,4 @@ mixin Message( content )
 body 
     +Message( "Hello World!" )
     p(x-data="{ message: `State is working` }" x-text="message")
+    script(async type="application/lua") print("Hello World!")
