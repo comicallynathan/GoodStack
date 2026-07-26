@@ -5,7 +5,7 @@ export default {
         },
         Loaders: {
             /* Enables Lua for browsers in document && scripting*/
-            lua: true,
+            lua: false,
             /* Enables Pug for components */
             pug: true,
             /* Enables importing SCSS */

@@ -1,5 +1,8 @@
-import "@styles/styles.scss";
 import Alpine from "alpinejs";
+
+import "@mods/Network";
+
+import "@styles/styles.scss";
 
 document.addEventListener(
     "DOMContentLoaded",

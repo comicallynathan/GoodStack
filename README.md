@@ -9,7 +9,7 @@ A good batteries-included webstack that focuses on modern tooling, type-safety, 
 | Document       | Pug             |
 | Styles         | SCSS + Tailwind |
 | Scripting      | Typescript      |
-| Data           | Drizzle         |
+| Data           | Kysely          |
 | State          | AlpineJS        |
 | Embedding      | Lua             |
 | Communications | Telefunc        |

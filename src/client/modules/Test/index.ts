@@ -12,7 +12,6 @@ import( "@components/test.pug" )
         )
     );
     
-import( "@mods/Network" );
 import { Message } from "@remotes/forms.telefunc";
 Message( "Hello from client!" );
 
