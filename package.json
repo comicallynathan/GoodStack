@@ -48,7 +48,7 @@
     "sass-loader": "^17.0.0",
     "style-loader": "^4.0.0",
     "telefunc": "^0.2.22",
-    "webpack": "^5.109.0",
+    "webpack": "latest",
     "webpack-cli": "^7.2.1",
     "zod": "^4.4.3"
   },
@@ -58,6 +58,6 @@
     "generate::database": "bunx kysely-codegen --out-file src/engine/types/Database.d.ts",
     "port": "ngrok http 3000",
     "start": "bun run compile && ./build/release/bin | bunx pino-pretty",
-    "watch": "bunx tsx --watch src/engine/app.ts"
+    "watch": "npx tsx --watch src/engine/app.ts"
   }
 }

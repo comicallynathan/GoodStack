@@ -14,7 +14,7 @@
         {
             "label": "Watch",
             "type": "shell",
-            "command": "bun run watch",
+            "command": "if [[ \"$OSTYPE\" == msys* || \"$OSTYPE\" == cygwin* ]]; then powershell -Command 'npm run watch'; else npm run watch; fi",
             "runOptions": {
                 "runOn": "folderOpen"
             }
